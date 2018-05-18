@@ -497,8 +497,8 @@ namespace DNWS
 						}
                         sb.Append(String.Format("<h2>Start new game by {0} as {1}. The game ID is {2}.</h2>", parameters["username"], parameters["side"], id));
                         sb.Append("You will need to wait for another player to join the game.<br /><br />");
-                        sb.Append(String.Format("<a href=\"/ox?username={0}\">Click here to go back to home page.</a>", parameters["username"]));
-
+                        // sb.Append(String.Format("<a href=\"/ox?username={0}\">Click here to go back to home page.</a>", parameters["username"]));
+                        sb.Append(String.Format("<META HTTP-EQUIV=\"refresh\" CONTENT=\"10; URL = /ox?username{0}\">", parameters["username"]));// New
                     }
 
                 }
